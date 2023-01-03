@@ -1,17 +1,16 @@
-import Head from 'next/head';
+import React from 'react'
 
-import '../styles/globals.css';
-import Layout from '../components/layout/layout';
-
-function MyApp({ Component, pageProps }) {
+function App() {
   return (
-    <Layout>
-      <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-      <Component {...pageProps} />
-    </Layout>
-  );
+    <div> 
+    <ul>
+      <li>Poduct</li>
+      <li>Poduct</li>
+      <li>Poduct</li>
+      <li>Poduct</li>
+    </ul>
+    </div>
+  )
 }
 
-export default MyApp;
+export default App
