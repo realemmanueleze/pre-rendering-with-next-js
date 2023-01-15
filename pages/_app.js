@@ -1,16 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function App() {
+function App({Component, pageProps}) {
   return (
-    <div> 
-    <ul>
-      <li>Poduct</li>
-      <li>Poduct</li>
-      <li>Poduct</li>
-      <li>Poduct</li>
-    </ul>
+    <div>
+      <Component {...pageProps} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
