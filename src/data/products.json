@@ -1,6 +1,6 @@
 [
-  { "id": 1, "title": "Product1" },
-  { "id": 2, "title": "Product2" },
-  { "id": 3, "title": "Product3" },
-  { "id": 4, "title": "Product4" }
+  { "id": 1, "title": "Product1", "description" : "Product Okro"},
+  { "id": 2, "title": "Product2", "description" : "Product Oha" },
+  { "id": 3, "title": "Product3", "description" : "Product Egusi" },
+  { "id": 4, "title": "Product4", "description" : "Product Ogbono" }
 ]
