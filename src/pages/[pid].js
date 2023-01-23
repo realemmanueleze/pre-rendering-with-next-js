@@ -4,6 +4,11 @@ import path from "path";
 
 function ProductInformation(props) {
   const { product } = props;
+
+  if (!product) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       <div>{product.title}</div>
@@ -16,11 +21,8 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { pid: "p1" } },
-      { params: { pid: "p2" } },
-      { params: { pid: "p3" } },
-      { params: { pid: "p4" } },
     ],
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -28,7 +30,7 @@ export async function getStaticProps(context) {
   const { params } = context;
   const { pid } = params;
 
-  const filePath = path.join(process.cwd(), "src", "data", 'products.json');
+  const filePath = path.join(process.cwd(), "src", "data", "products.json");
   const jsonData = await fs.readFile(filePath);
   const products = JSON.parse(jsonData);
   const product = products.find((product) => product.id === pid);
