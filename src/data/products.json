@@ -1,6 +1,6 @@
 [
-  { "id": 1, "title": "Product1", "description" : "Product Okro"},
-  { "id": 2, "title": "Product2", "description" : "Product Oha" },
-  { "id": 3, "title": "Product3", "description" : "Product Egusi" },
-  { "id": 4, "title": "Product4", "description" : "Product Ogbono" }
+  { "id": "p1", "title": "Product1", "description" : "Product Okro"},
+  { "id": "p2", "title": "Product2", "description" : "Product Oha" },
+  { "id": "p3", "title": "Product3", "description" : "Product Egusi" },
+  { "id": "p4", "title": "Product4", "description" : "Product Ogbono" }
 ]

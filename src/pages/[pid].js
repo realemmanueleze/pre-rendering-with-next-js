@@ -12,14 +12,26 @@ function ProductInformation(props) {
   );
 }
 
-export async function getStatic(context) {
-  const { params } = context;
-  const {pid} = params
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { pid: "p1" } },
+      { params: { pid: "p2" } },
+      { params: { pid: "p3" } },
+      { params: { pid: "p4" } },
+    ],
+    fallback: false,
+  };
+}
 
-  const filePath = path.join(process.cwd(), "src", "data", products.json);
-  const jsonData = fs.readFile(filePath);
+export async function getStaticProps(context) {
+  const { params } = context;
+  const { pid } = params;
+
+  const filePath = path.join(process.cwd(), "src", "data", 'products.json');
+  const jsonData = await fs.readFile(filePath);
   const products = JSON.parse(jsonData);
-  const product = products.find((product)=> product.id === pid);
+  const product = products.find((product) => product.id === pid);
   return {
     props: {
       product,
